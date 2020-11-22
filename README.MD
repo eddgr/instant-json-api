@@ -18,5 +18,29 @@ Additionally, only `GET` requests are supported.
 
 # Requirements
 
-Currently works with Python 2 and 3, and only requires Flask.
+Currently works with Python 2 and 3.
 
+- Flask
+- Flask-CORS
+
+`pip install -r requirements.txt`
+
+# Use with Flask
+
+Build the wheel file and import it your current Flask project.
+
+```
+from instant_json_api import InstantJsonApi
+from flask import Flask
+
+
+app = Flask(__name__)
+InstantJsonApi(app)
+```
+
+**Note**
+
+There will be conflicts if you have wildcard routes such as:
+`@app.route('/<first_slug>/<second_slug>', methods=['GET'])`
+
+Instant JSON API generated routes look like this `/api/<filename>`.
