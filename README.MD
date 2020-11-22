@@ -6,6 +6,12 @@ Simply place your JSON files in the folder and run `python app.py`. The default 
 
 API endpoint: `localhost:9001/api/<filename>`
 
+**Example Endpoint**
+
+Filename: `hello-world.json`
+
+API endpoint: `localhost:9001/api/hello-world`
+
 # Use Case
 
 Save time when working on personal projects to generate an API without having to set up a back end or database. Just write a JSON file instead.
